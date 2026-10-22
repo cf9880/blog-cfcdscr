@@ -1,0 +1,27 @@
+# Custom domain: blog.cfcdscr.com (static/CNAME)
+baseURL = "https://blog.cfcdscr.com/"
+languageCode = "en-us"
+title = "Coastal Funding DSCR Blog"
+enableRobotsTXT = true
+[outputs]
+  home = ["HTML", "RSS"]
+[sitemap]
+  changefreq = "weekly"
+[params]
+  logo = "images/logo.png"
+  publisher = "Coastal Funding Corporation"
+  description = "DSCR loan guides for real estate investors from Coastal Funding Corporation (NMLS 103035): qualify on a rental property's income, not your personal income."
+  brand = "Coastal Funding Corporation — DSCR"
+  tagline = "DSCR Loans for Real Estate Investors"
+  phone = "(833) 457-6500"
+  nmls = "103035"
+  email = "info@cfcmtg.com"
+  mainsite = "https://www.cfcdscr.com/"
+  maindomain = "www.cfcdscr.com"
+  city = "Pensacola"
+  region = "FL"
+  street = "534 S Navy Blvd"
+  area = "DSCR investment-property loans nationwide"
+  bg = "#0a0a0a"
+  accent = "#b7860b"
+  accent2 = "#ffd900"

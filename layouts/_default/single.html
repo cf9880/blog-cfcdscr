@@ -1,0 +1,6 @@
+{{ define "main" }}<article><h1>{{ .Title }}</h1><div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ if gt (.Lastmod.Sub .Date).Hours 24 }} &middot; Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time>{{ end }}{{ partial "byline.html" . }}</div>
+{{ $src := partial "imgurl.html" (dict "page" . "abs" false) }}{{ $dup := false }}{{ with .Params.image }}{{ $dup = strings.Contains $.RawContent (path.Base .) }}{{ end }}
+{{ if and $src (not $dup) }}<img class="feat" src="{{ $src }}" alt="{{ default .Title .Params.image_alt }}" fetchpriority="high" decoding="async">{{ end }}
+{{ .Content }}
+{{ partial "faq.html" . }}
+<p><a class="cta" href="{{ site.Params.mainsite }}">Ready to talk? Visit {{ site.Params.maindomain }}</a></p></article>{{ end }}
